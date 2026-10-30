@@ -10,8 +10,11 @@ def main():
         choice = input("Choose an option : add/list/total/quit")
         if choice == "add":
             item = input("Enter name of item")
-            amount = float(input("Enter amount of item"))
-            add_expense(expenses, item, amount)
+            try:
+                amount = float(input("Enter amount of item"))
+                add_expense(expenses, item, amount)
+            except ValueError:
+                print("Please enter a valid number for amount")
 
         elif choice == "list":
             print(expenses)
