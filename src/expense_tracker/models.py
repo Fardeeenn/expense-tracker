@@ -4,7 +4,4 @@ from dataclasses import dataclass
 class Expense:
     item: str
     amount: float
-
-
-e = Expense(item="chai", amount=20)
-
+    category: str
