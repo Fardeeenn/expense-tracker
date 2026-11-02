@@ -1,8 +1,8 @@
 from expense_tracker.models import Expense
 
 
-def add_expense(expenses: list[Expense], item: str, amount: float) -> None:
-    e = Expense(item=item, amount=amount)
+def add_expense(expenses: list[Expense], item: str, amount: float, category: str) -> None:
+    e = Expense(item=item, amount=amount, category=category)
     expenses.append(e)
 
 
